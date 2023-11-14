@@ -1,0 +1,300 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --background-color: #11070e;
+  --background-color-darker: #0a0408;
+  --link-color: #FFFE3E;
+
+
+
+}
+
+body, .button-navbar, .input-field, .button-navbar:hover, .button-refresh {
+  background-color: var(--background-color);
+}
+
+.navbar, .info-container, .lyrics-container, .song-container, .demo-container {
+  background-color: var(--background-color-darker);
+}
+
+.button-navbar, .input-field, .button-refresh {
+  border: 0.2px solid var(--link-color);
+}
+
+.button-navbar:hover, .button-refresh:hover {
+  background-color: var(--link-color);
+  color: var(--background-color);
+}
+
+.input-field:hover, .input-field:focus, a.name {
+  color: var(--link-color);
+
+}
+
+.lyrics pre::-webkit-scrollbar-thumb {
+  background-color: var(--link-color);
+}
+
+.link {
+  color: var(--link-color);
+}
+
+.logo {
+  height: 2em;
+
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.input-button-container {
+  display: flex;
+  align-items: center;
+  margin-right: 2em
+}
+
+.button-navbar {
+  color: white;
+  border-radius: 8px;
+
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.input-field {
+  border-radius: 8px;
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+
+  color: white;
+  transition: 0.5s;
+}
+
+
+
+
+
+.input-field:focus {
+
+  border: 0.2px solid var(--background-color);
+  outline: none;
+}
+
+.login {
+  padding-top: 5%;
+
+}
+
+.info-container {
+  min-height: 10vw;
+  height: auto;
+  width: 30vw;
+  margin: 0 auto;
+  /* Center horizontally */
+  margin-top: 50px;
+  border-radius: 15px;
+  padding: 20px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.demo-container {
+  height: auto;
+  width: 10vw;
+  margin: 0 auto;
+  /* Center horizontally */
+  margin-top: 50px;
+  border-radius: 15px;
+  padding: 20px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+span.logged-in {
+  display: flex;
+  margin-right: 10px;
+
+  color: white;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  max-width: 80vw;
+}
+
+.albumArt {
+  transition: 0.5s;
+  height: 18vw;
+}
+
+.albumArt:hover {
+  filter: grayscale(100%);
+}
+
+.lyrics-container {
+  min-height: 30vw;
+  max-height: 100vw;
+  height: auto;
+  width: 70%;
+  /* Set to 55% */
+  border-radius: 15px;
+}
+
+
+.lyrics {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-height: 83vh;
+}
+
+.lyrics pre {
+  max-height: 35vw;
+  height: 35vw !important;
+  overflow: auto;
+}
+
+.lyrics pre::-webkit-scrollbar {
+  width: 5px;
+  /* Adjust the width of the scrollbar */
+}
+
+.lyrics pre::-webkit-scrollbar-thumb {
+
+  /* Set the background color of the scrollbar thumb */
+  border-radius: 5px;
+  /* Set the border radius of the scrollbar thumb */
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+a.name {
+
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a.name:hover {
+  color: #4e4e00;
+}
+
+a {
+  text-decoration: none;
+}
+
+.lyrics pre::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* Set the background color of the scrollbar track */
+}
+
+.song-container {
+  border-radius: 15px;
+  width: 30%;
+  /* Set to 45% */
+  margin-right: 0.5%;
+}
+
+.song-info {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.song-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-refresh {
+  margin-bottom: 10%;
+}
+
+.footer {
+  max-height: 10vw;
+}
+
+.nothing-playing {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  text-align: center;
+
+}
+
+.button-refresh {
+  color: white;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+pre {
+  font-family: Arial, sans-serif;
+  /* Set the desired font family */
+  line-height: 1.5;
+  /* Set the desired line height */
+}

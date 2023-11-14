@@ -1,0 +1,4 @@
+Application name	Live Music Lyrics
+API key	03814037c28021b89d2fd7397a1542b3
+Shared secret	aa8a8fb7fc3fe5e092b0bed4eb1f0337
+Registered to	yawn
