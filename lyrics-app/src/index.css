@@ -324,7 +324,7 @@ pre {
   }
 
   .lyrics pre {
-    max-height: 60vh;
+    max-height: 40vh;
     height: 60vh !important;
     font-size: 12.5px;
   }
