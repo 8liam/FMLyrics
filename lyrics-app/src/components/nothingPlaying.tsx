@@ -1,6 +1,9 @@
-import React from 'react';
 
-export default function NothingPlaying({ fetchNowPlayingTrack }) {
+type Props = {
+    fetchNowPlayingTrack: () => void;
+}
+
+export default function NothingPlaying({ fetchNowPlayingTrack }: Props) {
     return (
         <div className="info-container">
             <div className="nothing-playing">

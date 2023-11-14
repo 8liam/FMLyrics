@@ -1,7 +1,13 @@
-import React from 'react';
-import { FaLastfm } from 'react-icons/fa';
 
-export default function NavBar({ cookieExists, username, handleLogin, handleLogout, inputRef }) {
+interface NavBarProps {
+    cookieExists: boolean;
+    username: string;
+    handleLogin: () => void;
+    handleLogout: () => void;
+    inputRef: React.RefObject<HTMLInputElement>;
+}
+
+export default function NavBar({ cookieExists, username, handleLogin, handleLogout, inputRef }: NavBarProps) {
     return (
         <div className="navbar">
             <div className="navbar-container">

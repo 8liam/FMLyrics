@@ -1,6 +1,10 @@
-import React from 'react';
 
-export default function Lyrics({ nowPlaying, lyricsLoading, songLyrics, fetchNowPlayingTrack }) {
+type LyricsProps = {
+    lyricsLoading: boolean;
+    songLyrics: string;
+}
+
+export default function Lyrics({ lyricsLoading, songLyrics }: LyricsProps) {
     return (
         <div className="lyrics-container">
             <div className="lyrics">

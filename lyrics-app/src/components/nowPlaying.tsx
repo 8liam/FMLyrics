@@ -1,6 +1,15 @@
-import React from 'react';
 
-export default function NowPlaying({ nowPlaying, songLoading, track, artist, album, image, songUrl, fetchNowPlayingTrack }) {
+type NowPlayingProps = {
+    songLoading: boolean;
+    track: string;
+    artist: string;
+    album: string;
+    image: string;
+    songUrl: string;
+    fetchNowPlayingTrack: () => void;
+}
+
+export default function NowPlaying({ songLoading, track, artist, album, image, songUrl, fetchNowPlayingTrack }: NowPlayingProps) {
     return (
         <div className="song-container">
             <div className="song-info">
