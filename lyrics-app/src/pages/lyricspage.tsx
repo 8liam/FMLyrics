@@ -8,7 +8,7 @@ import Lyrics from '../components/lyrics';
 import NothingPlaying from '../components/nothingPlaying';
 
 const LASTFM_API_KEY = 'b5ec587a857114c0a57356ecb1a66af9';
-const LYRICS_API_BASE_URL = 'http://localhost:3000';
+const LYRICS_API_BASE_URL = 'https://fmlyrics-3618e53bdfe2.herokuapp.com';
 
 export default function LyricsPage() {
     const inputRef = useRef<HTMLInputElement>(null);
@@ -88,26 +88,13 @@ export default function LyricsPage() {
                         setSongLoading(false);
                         setLyricsLoading(true);
 
-                        const LYRICS_API = `${LYRICS_API_BASE_URL}/?&user=${encodeURIComponent(username)}`;
+                        const LYRICS_API = `${LYRICS_API_BASE_URL}/?&track=${playingTrack}&artist=${playingArtist}`;
                         axios.get(LYRICS_API)
                             .then((response) => {
                                 const data = response.data;
                                 if (data?.lyrics) {
-                                    const playingArtistCleaned = playingArtist.replace(/\s/g, '').toLowerCase();
-                                    const dataArtistCleaned = data.artist.replace(/\s/g, '').toLowerCase();
-
-                                    console.log("playingArtist:", playingArtistCleaned);
-                                    console.log("data.artist:", dataArtistCleaned);
-                                    console.log(dataArtistCleaned === playingArtistCleaned);
-                                    if (dataArtistCleaned.includes(playingArtistCleaned)) {
-                                        console.log(`${data.artist} does match ${playingArtist}`);
-                                        setSongLyrics(data.lyrics);
-                                        setLyricsLoading(false);
-                                    } else {
-                                        console.log(`${dataArtistCleaned} does not match ${playingArtistCleaned}`);
-                                        setSongLyrics("No lyrics found");
-                                        setLyricsLoading(false);
-                                    }
+                                    setSongLyrics(data.lyrics);
+                                    setLyricsLoading(false);
                                 } else {
                                     console.log("Data or data.lyrics is missing");
                                     setSongLyrics("No lyrics found");
